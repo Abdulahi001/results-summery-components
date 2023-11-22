@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700;800&family=Montserrat:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* ## Colors
+
+### Primary
+
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+
+## Gradients
+
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%) */
+
+
+
+:root{
+    --light-red: hsl(0, 100%, 67%);
+    --orengey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --gobalt-blue: hsla(234, 85%, 45%, 0.507);
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue:hsla(241, 81%, 54%, 0.87);
+    --Violet-blue:hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsl(240, 73%, 4%);
+    --Pale-blue:hsl(221, 100%, 96%);
+    --Light-lavender:hsl(241, 100%, 89%);
+    --Dark-gray-blue:hsl(224, 30%, 27%) 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: grid;
+   background: var(--Pale-blue);
+
+    place-content: center;
+    height: 100vh;
+}
+#project{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 10px;
+    height: 450px;    
+}
+#project .firs-box{
+    padding: 0 60px;
+    background-image: linear-gradient( to top ,hsla(240, 100%, 47%, 0.863) 30%,hsla(234, 85%, 45%, 0.685)) ;
+   
+    height: 1fr;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+}
+
+#project .firs-box h2{
+    text-align: center;
+    color: var(--Light-lavender);
+
+}
+
+
+#project .firs-box .circle{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    background: var(--Light-royal-blue) ;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    
+
+
+}
+#project .firs-box .circle h1{
+    font-size: 4rem;
+    color: white;
+}
+
+#project .firs-box .circle p{
+    font-size: 14px;
+    color: var(--Light-lavender);
+}
+
+
+#project .firs-box .content-info h2{
+    color: white;
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+    
+}
+#project .firs-box .content-info p{
+    line-height: 23px;
+    text-align: center;
+    width: 200px;
+    font-size: 14px;
+    color: var(--Light-lavender);
+    padding-bottom: 20px;
+}
+
+#project .second-box{
+    height: 1fr;
+    background: #fff;
+    padding: 20px 40px;
+    margin-left: -20px;
+    border-top-right-radius:20px;
+    border-bottom-right-radius: 20px;
+}
+#project .second-box h3{
+    color: var(--Persian-blue);
+    font-size: 18px;
+}
+
+
+#project .second-box div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: hsla(0, 100%, 67%, 0.062);
+    margin: 20px 0;
+    
+    border-radius: 10px;
+}
+#project .second-box .red{
+    color: var(--light-red);
+}
+#project .second-box .blue{
+    color: var(--Persian-blue);
+}
+#project .second-box .blue span{
+    color:  hsl(224, 30%, 27%);
+}
+#project .second-box .yellow-back{
+    background-color:hsla(39, 100%, 56%, 0.123) ;
+}
+#project .second-box .yellow{
+    color: var(--orengey-yellow);
+}
+#project .second-box .verbal-back{
+    background:hsla(166, 100%, 37%, 0.048) ;
+}
+#project .second-box .verbal{
+    color: var(--green-teal);
+}
+#project .second-box .blue-back{
+    background: hsla(241, 81%, 54%, 0.062);
+}
+#project .second-box .blue-1{
+    color: var(--Light-royal-blue);
+}
+
+#project .second-box .btn{
+    background:  hsl(224, 30%, 27%);
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+
+    }
+
+    #project{
+        
+        display: grid;
+       
+        grid-template-rows: 520px;
+        grid-template-columns:360px ;
+        margin-bottom: 600px;
+     
+        height: 400px;
+        position: absolute;
+        box-sizing: border-box;
+    }
+    #project .firs-box{
+        background-image: linear-gradient( to top ,hsla(240, 92%, 46%, 0.938) 30%,hsla(234, 85%, 45%, 0.712)) ;
+        height: 450px;
+        padding-top:30px ;
+
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        position: relative;
+        bottom: -40px;
+        
+    }
+    #project .firs-box .circle{
+        width: 150px;
+        height: 150px;
+        background-color:hsla(241, 87%, 47%, 0.842) ;
+    }
+    #project .second-box {
+    position: relative;
+    margin-left: 1px;
+    top: -50px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    height: 500px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10pz;
+
+    }
+}
